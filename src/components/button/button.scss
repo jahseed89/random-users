@@ -1,0 +1,26 @@
+.btn-container {
+    button {
+        background-color: #fff;
+        color: hsl(185, 75%, 39%);
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            margin: .2rem .5rem 0 .5rem;
+        }
+
+        &:hover {
+            background-color:  hsl(185, 76%, 31%);
+            color: #fff;
+
+        }
+    }
+    
+}
