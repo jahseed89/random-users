@@ -3,30 +3,30 @@ import axios from "axios";
 import Button from "../components/button/Button";
 import "./users.scss";
 
-// const Users = () => {
-//   const [userData, setUserData] = useState([]);
-//   const [loading, setLoading] = useState(false);
-//   const [activeUser, setActiveUser] = useState(false);
+const Users = () => {
+  const [userData, setUserData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [activeUser, setActiveUser] = useState(false);
 
-//   const url = "https://randomuser.me/api/"
+  const url = "https://randomuser.me/api/"
 
-//   const handleClick = () => {
-//     setLoading(true);
-//     axios
-//       .get(url)
-//       .then((response) => {
-//         console.log(response.data.results);
-//         setUserData(response.data.results);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//         setLoading(true);
-//       })
-//       .finally(() => {
-//         setLoading(false);
-//         setActiveUser(true);
-//       });
-//   };
+  const handleClick = () => {
+    setLoading(true);
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response.data.results);
+        setUserData(response.data.results);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(true);
+      })
+      .finally(() => {
+        setLoading(false);
+        setActiveUser(true);
+      });
+  };
 
   return (
     <div className="users-container">
@@ -48,7 +48,6 @@ import "./users.scss";
                   <span>Gender</span>
                   <span>{user.gender}</span>
                 </p>
-                <hr />
                 <div className="footer">
                   <p>Location</p>
                   <p className="location">{user.location.country}</p>
