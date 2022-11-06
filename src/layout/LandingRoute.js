@@ -4,14 +4,15 @@ import BrandLoader from "../components/brand-loader/BrandLoader";
 import Landing from "./Landing";
 import {
   HOME_ROUTE,
-  ABOUT_PAGE_ROUTE,
+  ERROR_BOUNDRY_ROUTE,
   LANDING_ROUTE,
   USERS_ROUTE,
 } from "../constants/urls/Landing";
-import Users from "../pages/Users";
+import ErrorBoundry from "../pages/ErrorBoundry";
 
 const Home = lazy(() => import("../pages/Home"));
-const AboutPage = lazy(() => import("../pages/AboutPage"));
+const Users = lazy(() => import("../pages/Users"));
+
 
 const LandingRoute = () => {
   return (
@@ -25,7 +26,7 @@ const LandingRoute = () => {
               path={`${HOME_ROUTE}/*`}
               element={<Landing />}
             /> */}
-          <Route path={ABOUT_PAGE_ROUTE} element={<AboutPage />} />
+          <Route path={ERROR_BOUNDRY_ROUTE} element={<ErrorBoundry />} />
         </Route>
       </Routes>
     </Suspense>
